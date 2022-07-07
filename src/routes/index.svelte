@@ -74,12 +74,19 @@ On projection apartments unsatiable so if he entreaties appearance. Rose you wif
     </style>
 </svelte:head>
 <script>
+    // SSR
 function click(){
     console.log("click");
 }
+import { onMount } from 'svelte';
 
 import jQuery from 'jquery';
-jQuery(document).ready(function() {
+
+console.log("UnMounted")
+
+onMount(() => {
+    console.log("Mounted")
+    jQuery(document).ready(function() {
 	"use strict";
 	jQuery(".slider").ripples({
 		resolution: 512,
@@ -87,4 +94,5 @@ jQuery(document).ready(function() {
 		perturbance: 0.04,
 	});
 });
+})
 </script>
