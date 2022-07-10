@@ -1,12 +1,14 @@
 <script>
     // SSR
+// Image From https://th.bing.com/th/id/R.fe693025db2081927fac88522d73f0d3?rik=V%2bEpClwf1cqldg&pid=ImgRaw&r=0
+
+
 function click(){
     console.log("click");
 }
 import { onMount } from 'svelte';
 
 console.log("UnMounted")
-
 onMount(() => {
  
 });
@@ -21,7 +23,7 @@ let customClass = "rounded justify-self-end w-full customClass";
         background-color: bisque;
     }
         .slider{
-            background: url("https://th.bing.com/th/id/R.fe693025db2081927fac88522d73f0d3?rik=V%2bEpClwf1cqldg&pid=ImgRaw&r=0");
+            background: url("./images/photo.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -43,6 +45,9 @@ p{
 }
 .customClass{
     background-color:red; font-weight:bold;
+}
+.icons-after:after{
+    content: '🔗';
 }
 
     </style>
@@ -75,40 +80,153 @@ p{
     <section class ="bg-yellow-300 p-20 ">
 <p>On projection apartments unsatiable so if he entreaties appearance. Rose you wife how set lady half wish. Hard sing an in true felt. Welcomed stronger if steepest ecstatic an suitable finished of oh. Entered at excited at forming between so produce. Chicken unknown besides attacks gay compact out you. Continuing no simplicity no favourable on reasonably melancholy estimating. Own hence views two ask right whole ten seems. What near kept met call old west dine. Our announcing sufficient why pianoforte.</p>
 </section>
-    <footer class ="flex space-between p-20 bg-green-300 w-full">
-        <ul class ="flex-none px-5">
-            <li class ="border-b-4 font-medium font-Poppins">About us</li>
-            <li>Mission</li>
-            <li>FAQ</li>
-            <li>Awards & Affiliations</li>
-        </ul>
-        <ul class =" px-5 w-1/3"></ul>
-        <ul class ="flex-none px-10">
-            <li class ="border-b-4 font-medium font-Poppins">How You Can Help</li>
-            <li>Donate</li>
-            <li>Volunteer</li>
-            <li>Become A Sponsor</li>
-            <li>Support Us While you Shop</li>
-        </ul>
-        <ul class =" px-5 w-1/3"></ul>
-        <ul class ="flex-none px-10"> 
-            <li class ="border-b-4 font-medium font-Poppins">Events</li>
-            <li>News & Media</li>
-            <li>Who we help</li>
-            <li>Impact on the Community</li>
-            <li>Contact Us</li>
-        </ul>
-        <ul class =" px-5 w-1/3"></ul>
-        <ul class ="flex px-5 w-1/4 flex-col self-end">
-            <li class="pt-2 inline-flex items-center border-b-4 border-solid rounded border-red-500 hover:border-red-900 duration-200 text-center self-end"><p class="justify-self-start px-1">Sitemap</p> <b class="justify-self-end  px-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+    <footer class ="md:grid md:grid-cols-4 md:gap-4  space-between py-20 px-10 bg-green-300 w-full 2xl:flex">
+        <div class ="  w-1/4 bg-blue-500">
+            <a href="#" class ="border-b-4 font-medium font-Poppins w-full inline-block">Events</a>
+            <p>
+                <a href="#" >News & Media</a>
+            </p>
+            <p>
 
-            </li>
-            <li class="self-end">Icon</li>
-            <li class="self-end">Icon</li>
-            <li class="self-end">Icon</li>
-        </ul>
+                <a href="#" class="break-after-row" >Who we help</a>
+            </p>
+            
+            <p>
+                <a href="#" class="break-after-row" >Impact on the Community</a>
+            </p>
+            <p>
+                <a href="#" class="break-after-row" >Contact Us</a>
+            </p>
+        </div>
+       
+        <div class ="  w-1/4">
+            <a href="#" class ="border-b-4 font-medium font-Poppins w-full inline-block">Events</a>
+            <p>
+                <a href="#" >News & Media</a>
+            </p>
+            <p>
+
+                <a href="#" class="break-after-row" >Who we help</a>
+            </p>
+            
+            <p>
+                <a href="#" class="break-after-row" >Impact on the Community</a>
+            </p>
+            <p>
+                <a href="#" class="break-after-row" >Contact Us</a>
+            </p>
+        </div>
+        
+        <div class ="  w-1/4  break-after-auto"> 
+            <a href="#" class ="border-b-4 font-medium font-Poppins w-full inline-block">Events</a>
+            <p>
+                <a href="#" >News & Media</a>
+            </p>
+            <p>
+
+                <a href="#" class="break-after-row" >Who we help</a>
+            </p>
+            
+            <p>
+                <a href="#" class="break-after-row" >Impact on the Community</a>
+            </p>
+            <p>
+                <a href="#" class="break-after-row" >Contact Us</a>
+            </p>
+        </div>
+        
+        <div class =" md: lg:w-1/4  "> 
+            <a href="#" class ="border-b-4 font-medium font-Poppins w-full inline-block">Events</a>
+            <p>
+                <a href="#" >News & Media</a>
+            </p>
+            <p>
+
+                <a href="#" class="block" >Who we help</a>
+            </p>
+            
+            <p>
+                <a href="#" class="block" >Impact on the Community</a>
+            </p>
+            <p>
+                <a href="#" class="break-after-row" >Contact Us</a>
+            </p>
+
+        </div>
     </footer>
+
+
+
+<section class="py-10 px-5 bg-slate-700 text-white">
+
+ <div class="block">
+
+<div class="footer-example flex">
+
+<div class=" w-1/3"  hidden>
+    <div class="inline-flex bg-white rounded-full py-5 px-5">
+        <h3 class=" self-center  text-black font-bold text-2xl">
+          News.ly
+        </h3>
+        <svg xmlns="http://www.w3.org/2000/svg" class=" ml-1 h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="blue" stroke-width="1.25">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+          </svg>
+    </div>
+  
+  
+
+   
+ 
+
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-center sm:w-full md:w-2/3">
+
+    
+
+<div>
+<p class="footer-header font-semibold pb-2 underline">
+Category 1
+</p>
+<a href="http://" class="icons-after">
+Link To Page
+</a>
+<a href="http://" class="icons-after2 inline-flex self-center hover:underline">
+    Link To Page
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+      </svg>
+    </span>
+</a>
+    
+
+</div>
+<div> 2</div>
+<div> 3</div>
+<div> 4</div>
+
+</div>
+
+</div>
+  
+
+<div class=" w-full md:block lg:hidden mx-auto justify-center items-center place-self-center">
+    <div class="inline-flex bg-white rounded-full py-5 px-5">
+        <h3 class=" self-center  text-black font-bold text-2xl">
+          News.ly
+        </h3>
+        <svg xmlns="http://www.w3.org/2000/svg" class=" ml-1 h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="blue" stroke-width="1.25">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+          </svg>
+    </div>
+</div>
+  
+
+
+
+
+</section>
+
+
 </main>
